@@ -24,7 +24,7 @@ with st.sidebar:
 
 st.title('LipNet Full Stack App') 
 # Generating a list of options or videos 
-options = os.listdir(os.path.join('..', 'data', 's1'))
+options = os.listdir(os.path.join('data', 's1'))
 selected_video = st.selectbox('Choose video', options)
 
 # Generate two columns 
@@ -35,7 +35,7 @@ if options:
     # Rendering the video 
     with col1: 
         st.info('The video below displays the converted video in mp4 format')
-        file_path = os.path.join('data','s1', selected_video)
+        file_path = os.path.join('..','data','s1', selected_video)
         os.system(f'ffmpeg -i {file_path} -vcodec libx264 test_video.mp4 -y')
 
         # Rendering inside of the app
