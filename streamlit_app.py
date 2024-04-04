@@ -2,10 +2,16 @@
 import streamlit as st
 import os 
 import imageio 
+import gdown
 
 import tensorflow as tf 
 from utils import load_data, num_to_char
 from modelutil import load_model
+
+url = 'https://drive.google.com/uc?id=1YlvpDLix3S-U8fd-gqRwPcWXAXm8JwjL'
+output = 'data.zip'
+gdown.download(url, output, quiet=False)
+gdown.extractall('data.zip')
 
 # Set the layout to the streamlit app as wide 
 st.set_page_config(layout='wide')
