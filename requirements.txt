@@ -2,3 +2,5 @@ imageio==2.31.6
 streamlit==1.2.0
 tensorflow==2.15.0
 opencv-python==4.8.0.76
+cudatoolkit==11.2
+cudnn==8.1.0
