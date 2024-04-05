@@ -14,8 +14,8 @@ st.set_page_config(layout='wide')
 # Setup the sidebar
 with st.sidebar: 
     st.image('https://www.onepointltd.com/wp-content/uploads/2020/03/inno2.png')
-    st.title('LipBuddy')
-    st.info('This application is originally developed from the LipNet deep learning model.')
+    st.title('LipReading')
+    st.info('Project II.')
 
 st.title('LipNet Full Stack App') 
 # Generating a list of options or videos 
@@ -30,7 +30,7 @@ if options:
     # Rendering the video 
     with col1: 
         st.info('The video below displays the converted video in mp4 format')
-        file_path = os.path.join('..','data','s1', selected_video)
+        file_path = os.path.join('data','s1', selected_video)
         os.system(f'ffmpeg -i {file_path} -vcodec libx264 test_video.mp4 -y')
 
         # Rendering inside of the app
