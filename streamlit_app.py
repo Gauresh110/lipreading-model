@@ -17,7 +17,7 @@ with st.sidebar:
     st.title('LipReading')
     st.info('Project II.')
 
-st.title('LipNet Full Stack App') 
+st.title('Lip Reading Project') 
 # Generating a list of options or videos 
 options = os.listdir(os.path.join('data', 's1'))
 selected_video = st.selectbox('Choose video', options)
